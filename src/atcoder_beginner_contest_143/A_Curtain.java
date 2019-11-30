@@ -1,5 +1,7 @@
 package atcoder_beginner_contest_143;
 
+import java.util.Scanner;
+
 /**
  * A - Curtain
  *
@@ -24,13 +26,11 @@ public class A_Curtain {
 
   public static void main(String[] args) {
 
-    if (args.length > 2) {
-      throw new IllegalArgumentException("入力エラー");
-    }
+    Scanner scanner = new Scanner(System.in);
 
-    Integer windowSize = Integer.valueOf(args[0]);
+    Integer windowSize = scanner.nextInt();
 
-    Integer curtainSize = Integer.valueOf(args[1]);
+    Integer curtainSize = scanner.nextInt();
 
     A_Curtain a_curtain = new A_Curtain();
     int openWindowSize = a_curtain.calcOpenWindowSize(windowSize, curtainSize);
